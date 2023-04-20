@@ -18,7 +18,7 @@
 
 ## Doesn't have
 - Login support.
-- Home page or can't explore by catagory.
+- Home page or can't explore by category.
 - Search filters. 
 - English subtitles support.
 
