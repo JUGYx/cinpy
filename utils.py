@@ -1,6 +1,6 @@
-import sys
+from sys import exit
 from rich.console import Console
-import sys
+from rich.progress import Progress
 
 console = Console()
 
@@ -19,6 +19,4 @@ def msg(text,style):
 
 def die(c=0,text="Bye..."):
     msg(text,"#dd6777")
-    sys.exit(c)
-
-
+    exit(c)
