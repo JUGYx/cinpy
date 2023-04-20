@@ -78,7 +78,7 @@ def show_page(show):
 
             if episode_number == "0":
                 break
-            elif episode == "":
+            elif episode_number == "":
                 msg("\nProvide an episode number\n","#dd6777")
                 continue
 
