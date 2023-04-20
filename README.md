@@ -20,7 +20,7 @@
 - Login support.
 - Home page or can't explore by catagory.
 - Search filters. 
-- Arabic subtitles support.
+- English subtitles support.
 
 ## Usage
 - Clone the repo & cd.
