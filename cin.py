@@ -31,7 +31,7 @@ def download(video, subtitles, title):
 
         if download_path=="":
             download_path="./"
-        if download_path=="0":
+        elif download_path=="0":
             return
 
         download_path = path.expanduser(download_path)
