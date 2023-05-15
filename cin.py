@@ -89,7 +89,7 @@ def media_page(title):
     options.append(Separator(" "))
 
     subtitles=attachments['t']
-    if subtitles == None:
+    if subtitles is None:
         subtitles = (text("This specific media doesn't have subtitles provide some.\n file/url (optional)")
                    .unsafe_ask()
                    .strip())
@@ -118,7 +118,7 @@ def media_page(title):
     options.append(Choice(title=[("class:textred", "Download")], value="download"))
 
     action = select(
-            f"Pick Action",
+            "Pick Action",
             choices=options,
             style=custom_style_fancy
     ).unsafe_ask()
@@ -143,11 +143,11 @@ def show_page(show):
         options.append(Choice(title=[("class:textyellow", "*Cancel*")], value="cancel"))
         options.append(Separator(" "))
 
-        for season in seasons.keys():
+        for season in seasons:
             options.append(Choice(title=[("class:textred", season)]))
 
         season = select(
-                f"Pick season",
+                "Pick season",
                 choices=options,
                 style=custom_style_fancy
         ).unsafe_ask()
@@ -162,7 +162,7 @@ def show_page(show):
 
             if episode_number=="0":
                 break
-            elif episode_number=="":
+            if episode_number=="":
                 msg("\nProvide an episode number\n", "#dd6777")
                 continue
 
@@ -196,7 +196,7 @@ def search_page():
 
         clear()
         genre = select(
-                f"Pick genre",
+                "Pick genre",
                 choices=options,
                 style=custom_style_fancy
         ).unsafe_ask()
@@ -236,7 +236,7 @@ def search_page():
 
             if title == "cancel":
                 break
-            elif title == "next":
+            if title == "next":
                 page_number+=1
             elif title == "previous" and page_number>0:
                 page_number-=1
